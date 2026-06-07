@@ -23,7 +23,7 @@ registration::method("zen::misc::getMiscToolFactory", &zen::misc::_getMiscToolFa
 }
 
 std::string MiscToolFactory::version() {
-	return std::string("1.0");
+	return std::string(ZEN_MISC_TOOL_VERSION);
 }
 
 //---------------
@@ -31,7 +31,15 @@ StringToolPtr MiscToolFactory::createStringTool() {
 	return std::make_shared<StringTool>();
 }
 
+CodecToolPtr MiscToolFactory::createCodecTool() {
+	return std::make_shared<CodecTool>();
+}
+
 //创建局部对象-----------
 MiscToolFactoryPtr zen::misc::_getMiscToolFactory() {
 	return std::make_shared<MiscToolFactory>();
 }
+
+
+
+

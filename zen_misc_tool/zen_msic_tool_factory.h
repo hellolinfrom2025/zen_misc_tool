@@ -12,6 +12,7 @@ public:
 	virtual std::string version() override;
 
 	virtual StringToolPtr createStringTool()override;
+	virtual CodecToolPtr createCodecTool() override;
 };
 
 ZEN_MISC_TOOL_NAMESPACE_END
